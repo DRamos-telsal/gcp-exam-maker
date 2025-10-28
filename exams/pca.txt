@@ -1,0 +1,73 @@
+## Examtopics Professional Cloud Architect_55 question #4
+
+To speed up data retrieval, more vehicles will be upgraded to cellular connections and be able to transmit data to the ETL process. The current FTP process is error-prone and restarts the data transfer from the start of the file when connections fail, which happens often. You want to improve the reliability of the solution and minimize data transfer time on the cellular connections.
+What should you do?
+
+**A:** 1. Create an image of the on-premises virtual machines and upload into Cloud Storage.
+2. Import the image as a virtual disk on Compute Engine.
+
+**B:** 1. Create standard instances on Compute Engine.
+2. Select as the OS the same Microsoft Windows version that is currently in use in the on-premises environment.
+
+**C:** 1. Create an image of the on-premises virtual machine.
+2. Import the image as a virtual disk on Compute Engine.
+3. Create a standard instance on Compute Engine, selecting as the OS the same Microsoft Windows version that is currently in use in the on-premises environment.
+4. Attach a data disk that includes data that matches the created image.
+
+**D:** 1. Create an image of the on-premises virtual machines.
+2. Import the image as a virtual disk on Compute Engine using --os=windows-2022-dc-v.
+3. Create a sole-tenancy instance on Compute Engine that uses the imported disk as a boot disk.
+
+
+**Answer: ADC**
+
+**Timestamp: 2019-10-12 07:15:00**
+
+[View on ExamTopics](https://www.examtopics.com/discussions/google/view/6485-exam-professional-cloud-architect-topic-8-question-7/)
+
+----------------------------------------
+
+## Examtopics Professional Cloud Architect_55 question #6
+
+TerramEarth's 20 million vehicles are scattered around the world. Based on the vehicle's location, its telemetry data is stored in a Google Cloud Storage (GCS) regional bucket (US, Europe, or Asia). The CTO has asked you to run a report on the raw telemetry data to determine why vehicles are breaking down after 100 K miles. You want to run this job on all the data.
+What is the most cost-effective way to run this job?
+
+**A:** Move all the data into 1 zone, then launch a Cloud Dataproc cluster to run the job
+
+**B:** Move all the data into 1 region, then launch a Google Cloud Dataproc cluster to run the job
+
+**C:** Launch a cluster in each region to preprocess and compress the raw data, then move the data into a multi-region bucket and use a Dataproc cluster to finish the job
+
+**D:** Launch a cluster in each region to preprocess and compress the raw data, then move the data into a region bucket and use a Cloud Dataproc cluster to finish the job
+
+
+
+**Answer: D**
+
+**Timestamp: 2019-11-15 10:29:00**
+
+[View on ExamTopics](https://www.examtopics.com/discussions/google/view/8248-exam-professional-cloud-architect-topic-8-question-8/)
+
+----------------------------------------
+
+## Examtopics Professional Cloud Architect_52 question #11
+
+You need to optimize batch file transfers into Cloud Storage for Mountkirk Games' new Google Cloud solution. The batch files contain game statistics that need to be staged in Cloud Storage and be processed by an extract transform load (ETL) tool. What should you do?
+
+**A:** Use gsutil to batch move files in sequence.
+
+**B:** Use gsutil to batch copy the files in parallel.
+
+**C:** Use gsutil to extract the files as the first part of ETL.
+
+**D:** Use gsutil to load the files as the last part of ETL.
+
+
+
+**Answer: B**
+
+**Timestamp: 2021-07-03 03:18:00**
+
+[View on ExamTopics](https://www.examtopics.com/discussions/google/view/56977-exam-professional-cloud-architect-topic-7-question-1/)
+
+----------------------------------------
