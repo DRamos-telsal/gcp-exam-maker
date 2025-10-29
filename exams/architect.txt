@@ -1,7 +1,3 @@
-# Exam Topics Questions
-
-@thatonecodes
-
 ## Examtopics Professional Cloud Architect_55 question #4
 
 To speed up data retrieval, more vehicles will be upgraded to cellular connections and be able to transmit data to the ETL process. The current FTP process is error-prone and restarts the data transfer from the start of the file when connections fail, which happens often. You want to improve the reliability of the solution and minimize data transfer time on the cellular connections.

@@ -1,7 +1,3 @@
-# Exam Topics Questions
-
-@thatonecodes
-
 ## Examtopics Professional Cloud Database Engineer_19 question #1
 
 You are running a transactional application on Cloud SQL for PostgreSQL in Google Cloud. The database is running in a high availability configuration within one region. You have encountered issues with data and want to restore to the last known pristine version of the database. What should you do?

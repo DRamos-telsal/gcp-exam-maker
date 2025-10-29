@@ -12,15 +12,16 @@ pos = 0
 def parse_statement(block_lines):
     statement = ''
     global pos
-    for i, line in enumerate(block_lines[pos:]):
+    for i, line in enumerate(block_lines):
         if '## Examtopics' in line:
             continue
         if not line.strip():
             continue
-        statement += line
         if re.match(option_pattern, line):
             pos = i
             break
+        statement += line
+
 
     return statement
     
@@ -32,6 +33,9 @@ def parse_options(block):
     letter = ''
     global pos
     for i, line in enumerate(block[pos:]):
+        if re.search(answer_pattern, line):
+            options[letter] = current_option
+            break
         letter_match = re.search(option_pattern, line)
         if letter_match:
             if letter:
@@ -39,8 +43,11 @@ def parse_options(block):
             letter = letter_match.group(1)
             line = re.sub(option_pattern, '', line)
             current_option = ''
-        current_option += line + '\n'
+        if(line.strip()):
+            current_option += line + '\n'
 
+        
+    
     return options
     
 
@@ -69,7 +76,7 @@ def parse_exam_questions(file_path):
               parsed question. Returns an empty list if the file is not found.
     """
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(f'exams/{file_path}', 'r', encoding='utf-8') as f:
             content = f.read()
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' was not found.")
@@ -99,6 +106,9 @@ def parse_exam_questions(file_path):
 
         current_timestamp = parse_timestamp(block)
         
+        if not statement:
+            print(block)
+
         parsed_questions.append({
             'statement': statement,
             'options': current_options,
@@ -106,7 +116,8 @@ def parse_exam_questions(file_path):
             'timestamp': current_timestamp
         })
 
-
+    parsed_questions.sort(key=lambda question: question['timestamp'])
+    
     return parsed_questions
 
 def save_as_pickle(data, output_filename):
@@ -134,7 +145,7 @@ def parse_questions(input_file_no_ext):
 
 # --- Main execution ---
 if __name__ == "__main__":
-    input_file = "exams/pca.txt"
+    input_file = "pca.txt"
     
     # 2. Parse the file
     all_questions = parse_exam_questions(input_file)

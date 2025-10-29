@@ -1,7 +1,3 @@
-# Exam Topics Questions
-
-@thatonecodes
-
 ## Examtopics Professional Cloud Security Engineer_19 question #1
 
 Your organization develops software involved in many open source projects and is concerned about software supply chain threats. You need to deliver provenance for the build to demonstrate the software is untampered.

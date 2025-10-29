@@ -1,7 +1,3 @@
-# Exam Topics Questions
-
-@thatonecodes
-
 ## Examtopics Professional Cloud Developer_10 question #1
 
 You are developing a JPEG image-resizing API hosted on Google Kubernetes Engine (GKE). Callers of the service will exist within the same GKE cluster. You want clients to be able to get the IP address of the service.

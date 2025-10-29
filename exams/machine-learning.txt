@@ -1,7 +1,3 @@
-# Exam Topics Questions
-
-@thatonecodes
-
 ## Examtopics Professional Machine Learning Engineer_1 question #1
 
 You are building an ML model to detect anomalies in real-time sensor data. You will use Pub/Sub to handle incoming requests. You want to store the results for analytics and visualization. How should you configure the pipeline?

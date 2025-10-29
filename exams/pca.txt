@@ -1,73 +1,45 @@
-## Examtopics Professional Cloud Architect_55 question #4
+## Examtopics Professional Cloud DevOps Engineer_9 question #138
 
-To speed up data retrieval, more vehicles will be upgraded to cellular connections and be able to transmit data to the ETL process. The current FTP process is error-prone and restarts the data transfer from the start of the file when connections fail, which happens often. You want to improve the reliability of the solution and minimize data transfer time on the cellular connections.
-What should you do?
+Your company operates in a highly regulated domain. Your security team requires that only trusted container images can be deployed to Google Kubernetes Engine (GKE). You need to implement a solution that meets the requirements of the security team while minimizing management overhead. What should you do?
 
-**A:** 1. Create an image of the on-premises virtual machines and upload into Cloud Storage.
-2. Import the image as a virtual disk on Compute Engine.
+**A:** Configure Binary Authorization in your GKE clusters to enforce deploy-time security policies.
 
-**B:** 1. Create standard instances on Compute Engine.
-2. Select as the OS the same Microsoft Windows version that is currently in use in the on-premises environment.
+**B:** Grant the roles/artifactregistry.writer role to the Cloud Build service account. Confirm that no employee has Artifact Registry write permission.
 
-**C:** 1. Create an image of the on-premises virtual machine.
-2. Import the image as a virtual disk on Compute Engine.
-3. Create a standard instance on Compute Engine, selecting as the OS the same Microsoft Windows version that is currently in use in the on-premises environment.
-4. Attach a data disk that includes data that matches the created image.
+**C:** Use Cloud Run to write and deploy a custom validator. Enable an Eventarc trigger to perform validations when new images are uploaded.
 
-**D:** 1. Create an image of the on-premises virtual machines.
-2. Import the image as a virtual disk on Compute Engine using --os=windows-2022-dc-v.
-3. Create a sole-tenancy instance on Compute Engine that uses the imported disk as a boot disk.
+**D:** Configure Kritis to run in your GKE clusters to enforce deploy-time security policies.
 
 
-**Answer: ADC**
 
-**Timestamp: 2019-10-12 07:15:00**
+**Answer: A**
 
-[View on ExamTopics](https://www.examtopics.com/discussions/google/view/6485-exam-professional-cloud-architect-topic-8-question-7/)
+**Timestamp: 2023-10-28 19:45:00**
+
+[View on ExamTopics](https://www.examtopics.com/discussions/google/view/124848-exam-professional-cloud-devops-engineer-topic-1-question-135/)
 
 ----------------------------------------
 
-## Examtopics Professional Cloud Architect_55 question #6
+## Examtopics Professional Cloud DevOps Engineer_9 question #142
 
-TerramEarth's 20 million vehicles are scattered around the world. Based on the vehicle's location, its telemetry data is stored in a Google Cloud Storage (GCS) regional bucket (US, Europe, or Asia). The CTO has asked you to run a report on the raw telemetry data to determine why vehicles are breaking down after 100 K miles. You want to run this job on all the data.
-What is the most cost-effective way to run this job?
+Your CTO has asked you to implement a postmortem policy on every incident for internal use. You want to define what a good postmortem is to ensure that the policy is successful at your company. What should you do? (Choose two.)
 
-**A:** Move all the data into 1 zone, then launch a Cloud Dataproc cluster to run the job
+**A:** Ensure that all postmortems include what caused the incident, identify the person or team responsible for causing the incident, and how to prevent a future occurrence of the incident.
 
-**B:** Move all the data into 1 region, then launch a Google Cloud Dataproc cluster to run the job
+**B:** Ensure that all postmortems include what caused the incident, how the incident could have been worse, and how to prevent a future occurrence of the incident.
 
-**C:** Launch a cluster in each region to preprocess and compress the raw data, then move the data into a multi-region bucket and use a Dataproc cluster to finish the job
+**C:** Ensure that all postmortems include the severity of the incident, how to prevent a future occurrence of the incident, and what caused the incident without naming internal system components.
 
-**D:** Launch a cluster in each region to preprocess and compress the raw data, then move the data into a region bucket and use a Cloud Dataproc cluster to finish the job
+**D:** Ensure that all postmortems include how the incident was resolved and what caused the incident without naming customer information.
 
-
-
-**Answer: D**
-
-**Timestamp: 2019-11-15 10:29:00**
-
-[View on ExamTopics](https://www.examtopics.com/discussions/google/view/8248-exam-professional-cloud-architect-topic-8-question-8/)
-
-----------------------------------------
-
-## Examtopics Professional Cloud Architect_52 question #11
-
-You need to optimize batch file transfers into Cloud Storage for Mountkirk Games' new Google Cloud solution. The batch files contain game statistics that need to be staged in Cloud Storage and be processed by an extract transform load (ETL) tool. What should you do?
-
-**A:** Use gsutil to batch move files in sequence.
-
-**B:** Use gsutil to batch copy the files in parallel.
-
-**C:** Use gsutil to extract the files as the first part of ETL.
-
-**D:** Use gsutil to load the files as the last part of ETL.
+**E:** Ensure that all postmortems include all incident participants in postmortem authoring and share postmortems as widely as possible.
 
 
 
-**Answer: B**
+**Answer: CE**
 
-**Timestamp: 2021-07-03 03:18:00**
+**Timestamp: 2023-10-21 18:55:00**
 
-[View on ExamTopics](https://www.examtopics.com/discussions/google/view/56977-exam-professional-cloud-architect-topic-7-question-1/)
+[View on ExamTopics](https://www.examtopics.com/discussions/google/view/124238-exam-professional-cloud-devops-engineer-topic-1-question-136/)
 
 ----------------------------------------
