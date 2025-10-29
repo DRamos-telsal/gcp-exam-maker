@@ -207,7 +207,7 @@ def main():
     assert(num_to_ask == len(selected_questions))
     results, score = run_exam(selected_questions)
     
-    save_results(results, score)
+    #save_results(results, score)
 
 if __name__ == "__main__":
     main()
