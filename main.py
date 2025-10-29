@@ -1,9 +1,18 @@
+#!/usr/bin/env python3
+
 import random
 import textwrap
 import os
 import json
 import pickle
 from datetime import datetime
+
+# --- FIX ---
+# Define the application name and find the correct data directory
+# This *must* match the PACKAGE_NAME in your build-package.sh
+APP_NAME = "gcp-exam-maker"
+DATA_DIR = os.path.join("/usr/share", APP_NAME, "pickles")
+# --- END FIX ---
 
 def clear_screen():
     """Clears the terminal screen."""
@@ -13,7 +22,7 @@ def wait_for_next():
     """Pauses the script until the user presses Enter."""
     input("\nPress Enter to continue to the next question...")
 
-def load_questions(folder_path='/home/user/gcp-exam-maker/pickles'):
+def load_questions(folder_path=DATA_DIR):
     all_questions = {}
     try:
         # Get a list of all items (files and folders) in the directory
